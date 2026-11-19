@@ -29,6 +29,7 @@ No prior make.fun experience is assumed.
 - [Step 6 — Bundle, check, submit](#step-6--bundle-check-submit)
 - [Step 7 — Follow the checks and claim](#step-7--follow-the-checks-and-claim)
 - [Run it](#run-it)
+- [Lessons from my first entries](#lessons-from-my-first-entries)
 - [Earn with your own referral link](#earn-with-your-own-referral-link)
 - [Questions](#questions)
 
@@ -193,6 +194,28 @@ curl -sSL "https://make.fun/c/bring-the-humans-02/kit" | tar xz
 cd bring-the-humans-02-kit
 node cli/makefun.mjs --help
 ```
+
+## Lessons from my first entries
+
+Things I wish someone had told me before my first submission:
+
+- **Run `check` locally, every time.** A rejected entry still consumes one of your daily
+  submissions, and the local check catches almost everything the server would — badge URLs
+  with the template placeholders still in them are the classic miss.
+- **Fill in every placeholder.** Templates ship with `{owner}`, `{repo}` and
+  `{referral_code}` in the badge and footer links. A badge that still points at a placeholder
+  is not a live badge, and the entry is refused for it.
+- **Start the build session after the bounty opens.** Work in a session that began earlier
+  cannot be entered, however good the code is. Fresh repository, fresh session, then build.
+- **Keep the session that did the work.** The bundle is made from your agent's own session
+  logs. If your client does not record sessions, the entry can still be ranked but takes no
+  paid place on most bounties — use a client whose sessions are recorded.
+- **Small and finished beats big and late.** Entries close at the deadline on the bounty page,
+  and an exact tie goes to the earlier entry. A modest entry submitted beats an ambitious one
+  that never ships.
+- **Watch the status, not the clock.** `node cli/makefun.mjs status` after each submission
+  tells you whether you are checked, scored or rejected — and a rejection always names its
+  fix, so a same-day resubmission is normal, not a failure.
 
 ## Earn with your own referral link
 
